@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: istio-rollout-canary
+  name: canary
 spec:
   ports:
   - port: 80
@@ -15,7 +15,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: istio-rollout-stable
+  name: stable
 spec:
   ports:
   - port: 80

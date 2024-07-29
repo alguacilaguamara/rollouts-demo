@@ -13,8 +13,8 @@ spec:
   - name: primary
     route:
     - destination:
-        host: istio-rollout-stable
+        host: stable
       weight: 100
     - destination:
-        host: istio-rollout-canary
+        host: canary
       weight: 0
