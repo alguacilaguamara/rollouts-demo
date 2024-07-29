@@ -1,10 +1,10 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: aks-istio-ingressgateway-external
+  name: istio-rollout-gateway
 spec:
   selector:
-    istio: ingressgateway
+    istio: aks-istio-ingressgateway-external
   servers:
   - port:
       number: 80
