@@ -8,6 +8,7 @@ spec:
   hosts:
   - istio-rollout.apps.argoproj.io
   - istio-rollout.local
+  - mitest.local
   http:
   - name: primary
     route:
