@@ -27,3 +27,15 @@ spec:
             reporter="source",
             destination_service=~"{{args.service}}.{{args.namespace}}.svc.cluster.local"}[40s])
           )
+  # - name: latency
+  #   initialDelay: 60s
+  #   interval: 20s
+  #   successCondition: result[0] < 0.5
+  #   provider:
+  #     prometheus:
+  #       address: http://10.244.2.168:9090
+  #       query: >+
+  #         histogram_quantile(0.95, sum(rate(istio_request_duration_seconds_bucket{
+  #           reporter="source",
+  #           destination_service=~"{{args.service}}.{{args.namespace}}.svc.cluster.local"}[40s])
+  #         ) by (le))
