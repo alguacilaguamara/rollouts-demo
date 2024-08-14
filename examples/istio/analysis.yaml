@@ -14,7 +14,6 @@ spec:
     successCondition: result[0] > 0.90
     provider:
       prometheus:
-        #address: http://prometheus.aks-istio-system.svc.cluster.local:9090
         address: http://10.244.0.218:9090
         query: >+
           sum(irate(istio_requests_total{
@@ -39,3 +38,5 @@ spec:
   #           reporter="source",
   #           destination_service=~"{{args.service}}.{{args.namespace}}.svc.cluster.local"}[40s])
   #         ) by (le))
+
+#address: http://prometheus.aks-istio-system.svc.cluster.local:9090
